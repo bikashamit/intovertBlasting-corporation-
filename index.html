@@ -22,28 +22,6 @@
             flex-direction: column;
         }
 
-        /* --- 12% Top Ad Space Area --- */
-        .ad-space {
-            height: 12vh; /* Exactly 12% of screen */
-            width: 100%;
-            background-color: #1a1a1a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 2px solid #333;
-            z-index: 10;
-            overflow: hidden;
-        }
-
-        /* Style for the Ad Image */
-        .ad-banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Stretches and fits nicely without leaving gaps */
-            object-position: center;
-            display: block;
-        }
-
         /* --- 88% Main Content Area --- */
         .main-content {
             height: 88vh; /* Exactly 88% of screen */
@@ -62,7 +40,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('bimage introvertblasting.png'); 
+            /* Make sure to name your image 'bg-image.jpeg' or change this URL */
+            background-image: url('bg-image.jpeg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -97,7 +76,7 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             line-height: 1.2;
-            text-shadow: 0px 4px 15px rgba(255, 165, 0, 0.6);
+            text-shadow: 0px 4px 15px rgba(255, 165, 0, 0.6); /* Golden/Orange glow matching the sunset */
         }
 
         .logo-subtitle {
@@ -109,13 +88,27 @@
             text-transform: uppercase;
         }
 
+        /* --- 12% Ad Space Area --- */
+        .ad-space {
+            height: 12vh; /* Exactly 12% of screen */
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            border-top: 2px solid #333;
+            z-index: 10;
+        }
+
         /* Keyframe Animations */
         @keyframes slowZoom {
             0% {
                 transform: scale(1);
             }
             100% {
-                transform: scale(1.15);
+                transform: scale(1.15); /* Zooms in by 15% */
             }
         }
 
@@ -135,12 +128,6 @@
 </head>
 <body>
 
-    <!-- 12% ADVERTISEMENT BANNER (TOP) -->
-    <div class="ad-space">
-        <img src="image introvertblasting.png" alt="Introvert Blasting Ad Banner" class="ad-banner-img">
-    </div>
-
-    <!-- 88% MAIN CONTENT -->
     <div class="main-content">
         <div class="animated-background"></div>
         <div class="overlay"></div>
@@ -149,6 +136,10 @@
             <div class="logo-title">Introvert<br>Blasting</div>
             <div class="logo-subtitle">Corporation</div>
         </div>
+    </div>
+
+    <div class="ad-space">
+        <div>[ 12% ADVERTISEMENT SPACE ]</div>
     </div>
 
 </body>
